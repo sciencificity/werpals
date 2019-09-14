@@ -1,5 +1,4 @@
-Disney Palettes
----------------
+## Disney Palettes
 
 <img src="./alice.PNG" width = 300px />
 
@@ -9,8 +8,7 @@ Palette Colours from a blog post
 Palette made following blog post
 [here](https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2).
 
-Installation
-------------
+## Installation
 
 **The development version**
 
@@ -18,8 +16,7 @@ Installation
 devtools::install_github("sciencificity/serenityr")
 ```
 
-Usage
------
+## Usage
 
 ``` r
 library(serenityr)
@@ -49,21 +46,21 @@ dsamp <- diamonds[sample(nrow(diamonds), 1000), ]
 (d <- ggplot(dsamp, aes(carat, price)) + geom_point(aes(colour = clarity)))
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 ``` r
 # Change scale to disney default
 d + scale_colour_disney()
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-2.png)
+![](README_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
 
 ``` r
 # Change scale to disney - `alice` palette
 d + scale_colour_disney("alice")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-3.png)
+![](README_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
 
 ``` r
 
@@ -79,7 +76,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   scale_colour_disney(palette = "when_i_was_your_age", na.value = "black")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-4.png)
+![](README_files/figure-gfm/unnamed-chunk-2-4.png)<!-- -->
 
 ``` r
 
@@ -90,4 +87,4 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
     scale_fill_nature(palette = "jozi", guide = "none")
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-5.png)
+![](README_files/figure-gfm/unnamed-chunk-2-5.png)<!-- -->
