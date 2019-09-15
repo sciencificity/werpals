@@ -11,12 +11,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Disney Palettes
+## Palettes inspired by nature and disney films
 
 <img src="./alice.PNG" width = 300px /> 
 
 
-Palette Colours from a blog post [here](http://elijahmeeks.com/#content/blog/2015_08_17_palettes) and [here](https://medium.com/sketch-app-sources/10-color-palettes-from-the-natural-world-to-inspire-your-creative-streak-bc2fb73d161e)
+Palette Colours from a blog post [here](http://elijahmeeks.com/#content/blog/2015_08_17_palettes) and [here](https://medium.com/sketch-app-sources/10-color-palettes-from-the-natural-world-to-inspire-your-creative-streak-bc2fb73d161e).
 Palette made following blog post [here](https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2).
 
 ## Installation
@@ -24,13 +24,13 @@ Palette made following blog post [here](https://drsimonj.svbtle.com/creating-cor
 __The development version__
 
 ```r
-devtools::install_github("sciencificity/serenityr")
+devtools::install_github("sciencificity/werpals")
 ```
 
 ## Usage
 
 ```{r, message = FALSE, warning = FALSE, eval = TRUE}
-library(serenityr)
+library(werpals)
 library(tidyverse)
 # See all palettes of disney
 names(disney_palettes)
