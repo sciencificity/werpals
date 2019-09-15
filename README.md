@@ -137,6 +137,6 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
 
 ![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
 
-<img src="./man/figures/provence.png" width = 650px />
+<img src="./man/figures/provence.png" width = 600px />
 
-<img src="./man/figures/cinderella.png" width = 650px />
+<img src="./man/figures/cinderella.png" width = 600px />
