@@ -31,6 +31,26 @@ devtools::install_github("sciencificity/werpals")
 
 ## Usage
 
+There are a few functions that may be used with ggplot2 plots:
+
+__Disney Like Colours -__
+
+* scale_colour_disney() OR scale_color_disney() for one of the disney-like palettes to be applied.
+* scale_fill_disney() to fill with disney-like palette. 
+
+__Nature Like Colours - __
+
+* scale_colour_nature() OR scale_color_nature() for one of the nature like palettes to be applied.
+* scale_fill_disney() to fill with disney-like palette. 
+
+### Example Code
+You may run these examples to see the difference in applying these colour scales. In addition use the help functions and navigate to the help section where you will find some examples.
+
+* ?scale_colour_disney
+* ?scale_fill_disney
+* ?scale_colour_nature
+* ?scale_fill_nature 
+
 ```{r, message = FALSE, warning = FALSE, eval = TRUE}
 library(werpals)
 library(tidyverse)
@@ -83,7 +103,6 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   scale_fill_disney(palette = "cinderella", guide = "none")
 ```
-
 ```{r, echo = FALSE, eval = FALSE}
 library(cowplot)
 library(magick)
@@ -97,11 +116,7 @@ p2 <- ggdraw() + draw_image("man/figures/ggplot_cinderella.png", scale = 0.9)
 
 plot_grid(p1, p2)
 ```
+<img src="./man/figures/provence.png" width = 650px /> 
 
-<img src="./man/figures/provence.png" width = 600px /> 
+<img src="./man/figures/cinderella.png" width = 650px /> 
 
-![](man/figures/provence_blog.PNG) ![](man/figures/ggplot_provence.png)
-
-<img src="./man/figures/cinderella.png" width = 600px /> 
-
-![](man/figures/cinderella_blog.PNG) ![](man/figures/ggplot_cinderella.png)

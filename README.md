@@ -18,6 +18,33 @@ devtools::install_github("sciencificity/werpals")
 
 ## Usage
 
+There are a few functions that may be used with ggplot2 plots:
+
+**Disney Like Colours -**
+
+  - scale\_colour\_disney() OR scale\_color\_disney() for one of the
+    disney-like palettes to be applied.
+  - scale\_fill\_disney() to fill with disney-like palette.
+
+**Nature Like Colours - **
+
+  - scale\_colour\_nature() OR scale\_color\_nature() for one of the
+    nature like palettes to be applied.
+  - scale\_fill\_disney() to fill with disney-like palette.
+
+### Example Code
+
+You may run these examples to see the difference in applying these
+colour scales. In addition use the help functions and navigate to the
+help section where you will find some examples.
+
+  - ?scale\_colour\_disney
+  - ?scale\_fill\_disney
+  - ?scale\_colour\_nature
+  - ?scale\_fill\_nature
+
+<!-- end list -->
+
 ``` r
 library(werpals)
 library(tidyverse)
@@ -110,11 +137,6 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
 
 ![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
 
-<img src="./man/figures/provence.png" width = 600px />
+<img src="./man/figures/provence.png" width = 650px />
 
-![](man/figures/provence_blog.PNG) ![](man/figures/ggplot_provence.png)
-
-<img src="./man/figures/cinderella.png" width = 600px />
-
-![](man/figures/cinderella_blog.PNG)
-![](man/figures/ggplot_cinderella.png)
+<img src="./man/figures/cinderella.png" width = 650px />
