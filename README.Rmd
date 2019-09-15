@@ -84,8 +84,9 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
   geom_bar() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   scale_fill_disney(palette = "cinderella", guide = "none")
+```
 
-
+```{r, echo = FALSE, eval = FALSE}
 p1 <- ggdraw() + draw_image("man/figures/provence_blog.PNG", scale = 0.9)
 p2 <- ggdraw() + draw_image("man/figures/ggplot_provence.png", scale = 0.9)
 
@@ -97,3 +98,6 @@ p2 <- ggdraw() + draw_image("man/figures/ggplot_cinderella.png", scale = 0.9)
 plot_grid(p1, p2)
 ```
 
+<img src="./man/figures/provence.PNG" width = 300px /> 
+
+<img src="./man/figures/cinderella.PNG" width = 300px /> 

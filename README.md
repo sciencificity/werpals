@@ -112,23 +112,6 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
 
 ![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
 
-``` r
+<img src="./man/figures/provence.PNG" width = 300px />
 
-
-p1 <- ggdraw() + draw_image("man/figures/provence_blog.PNG", scale = 0.9)
-p2 <- ggdraw() + draw_image("man/figures/ggplot_provence.png", scale = 0.9)
-
-plot_grid(p1, p2)
-```
-
-![](README_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
-
-``` r
-
-p1 <- ggdraw() + draw_image("man/figures/cinderella_blog.PNG", scale = 0.9)
-p2 <- ggdraw() + draw_image("man/figures/ggplot_cinderella.png", scale = 0.9)
-
-plot_grid(p1, p2)
-```
-
-![](README_files/figure-gfm/unnamed-chunk-4-4.png)<!-- -->
+<img src="./man/figures/cinderella.PNG" width = 300px />
