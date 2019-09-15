@@ -116,14 +116,14 @@ p2 <- ggdraw() + draw_image("man/figures/ggplot_cinderella.png")
 
 plot_grid(p1, p2)
 ```
-<img src="./man/figures/provence.png" width = 600px /> 
+<img src="./man/figures/provence.png" width = 700px /> 
 
-<img src="./man/figures/cinderella.png" width = 600px /> 
+<img src="./man/figures/cinderella.png" width = 700px /> 
 
 ### Getting help
 
-<img src="./man/figures/help1.gif" width = 500px /> 
+<img src="./man/figures/help1.gif" width = 800px /> 
 
 ### Using the scale_fill_disney
 
-<img src="./man/figures/apply.gif" width = 500px /> 
+<img src="./man/figures/apply.gif" width = 800px /> 

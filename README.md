@@ -99,14 +99,14 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
   scale_fill_disney(palette = "cinderella", guide = "none")
 ```
 
-<img src="./man/figures/provence.png" width = 600px />
+<img src="./man/figures/provence.png" width = 700px />
 
-<img src="./man/figures/cinderella.png" width = 600px />
+<img src="./man/figures/cinderella.png" width = 700px />
 
 ### Getting help
 
-<img src="./man/figures/help1.gif" width = 500px />
+<img src="./man/figures/help1.gif" width = 800px />
 
 ### Using the scale\_fill\_disney
 
-<img src="./man/figures/apply.gif" width = 500px />
+<img src="./man/figures/apply.gif" width = 800px />
