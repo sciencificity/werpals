@@ -366,7 +366,7 @@ disney_pal <- function(palette = "main", reverse = FALSE, ...) {
 
   if (is.null(pal)) {
     stop(stringr::str_glue("Cannot find palette! Palette names are: cinderella, monet, small_world, alice,
-                  pan, when_i_was_your_age, firefly, main."))
+                           pan, when_i_was_your_age, firefly, main."))
   }
 
   if (reverse) pal <- rev(pal)
@@ -387,7 +387,7 @@ nature_pal <- function(palette = "main", reverse = FALSE, ...) {
 
   if (is.null(pal)) {
     stop(stringr::str_glue("Cannot find palette! Palette names are: uyuni, okavango, lakelouise, provence,
-                  halong, vatnajokull, arashiyama, mountcook, benagil, bryce, jozi."))
+                           halong, vatnajokull, arashiyama, mountcook, benagil, bryce, jozi."))
   }
 
   if (reverse) pal <- rev(pal)

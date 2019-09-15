@@ -21,6 +21,9 @@ devtools::install_github("sciencificity/werpals")
 ``` r
 library(werpals)
 library(tidyverse)
+library(cowplot)
+library(magick)
+
 # See all palettes of disney
 names(disney_palettes)
 #> [1] "main"                "cinderella"          "monet"              
@@ -88,3 +91,44 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-3-5.png)<!-- -->
+
+``` r
+# Recreate the plots displayed in the images below
+ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_fill_nature(palette = "provence", guide = "none")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+``` r
+
+ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_fill_disney(palette = "cinderella", guide = "none")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+
+``` r
+
+
+p1 <- ggdraw() + draw_image("man/figures/provence_blog.PNG", scale = 0.9)
+p2 <- ggdraw() + draw_image("man/figures/ggplot_provence.png", scale = 0.9)
+
+plot_grid(p1, p2)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
+
+``` r
+
+p1 <- ggdraw() + draw_image("man/figures/cinderella_blog.PNG", scale = 0.9)
+p2 <- ggdraw() + draw_image("man/figures/ggplot_cinderella.png", scale = 0.9)
+
+plot_grid(p1, p2)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-4.png)<!-- -->

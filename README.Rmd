@@ -2,6 +2,8 @@
 output:
   md_document:
     variant: gfm
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, echo = FALSE}
@@ -32,6 +34,9 @@ devtools::install_github("sciencificity/werpals")
 ```{r, message = FALSE, warning = FALSE, eval = TRUE}
 library(werpals)
 library(tidyverse)
+library(cowplot)
+library(magick)
+
 # See all palettes of disney
 names(disney_palettes)
 
@@ -67,3 +72,28 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
     scale_fill_nature(palette = "jozi", guide = "none")
 ```
+
+```{r, message = FALSE, warning = FALSE, eval = TRUE}
+# Recreate the plots displayed in the images below
+ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_fill_nature(palette = "provence", guide = "none")
+
+ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_fill_disney(palette = "cinderella", guide = "none")
+
+
+p1 <- ggdraw() + draw_image("man/figures/provence_blog.PNG", scale = 0.9)
+p2 <- ggdraw() + draw_image("man/figures/ggplot_provence.png", scale = 0.9)
+
+plot_grid(p1, p2)
+
+p1 <- ggdraw() + draw_image("man/figures/cinderella_blog.PNG", scale = 0.9)
+p2 <- ggdraw() + draw_image("man/figures/ggplot_cinderella.png", scale = 0.9)
+
+plot_grid(p1, p2)
+```
+
