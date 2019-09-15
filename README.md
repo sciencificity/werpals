@@ -102,3 +102,11 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
 <img src="./man/figures/provence.png" width = 600px />
 
 <img src="./man/figures/cinderella.png" width = 600px />
+
+### Getting help
+
+<img src="./man/figures/help1.gif" width = 500px />
+
+### Using the scale\_fill\_disney
+
+<img src="./man/figures/apply.gif" width = 500px />

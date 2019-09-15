@@ -120,3 +120,10 @@ plot_grid(p1, p2)
 
 <img src="./man/figures/cinderella.png" width = 600px /> 
 
+### Getting help
+
+<img src="./man/figures/help1.gif" width = 500px /> 
+
+### Using the scale_fill_disney
+
+<img src="./man/figures/apply.gif" width = 500px /> 
