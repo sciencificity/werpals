@@ -21,8 +21,6 @@ devtools::install_github("sciencificity/werpals")
 ``` r
 library(werpals)
 library(tidyverse)
-library(cowplot)
-library(magick)
 
 # See all palettes of disney
 names(disney_palettes)
@@ -114,4 +112,9 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
 
 <img src="./man/figures/provence.png" width = 600px />
 
+![](man/figures/provence_blog.PNG) ![](man/figures/ggplot_provence.png)
+
 <img src="./man/figures/cinderella.png" width = 600px />
+
+![](man/figures/cinderella_blog.PNG)
+![](man/figures/ggplot_cinderella.png)
