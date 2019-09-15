@@ -38,20 +38,20 @@ __Disney Like Colours -__
 * scale_colour_disney() OR scale_color_disney() for one of the disney-like palettes to be applied.
 * scale_fill_disney() to fill with disney-like palette. 
 
-__Nature Like Colours - __
+__Nature Like Colours -__
 
 * scale_colour_nature() OR scale_color_nature() for one of the nature like palettes to be applied.
-* scale_fill_disney() to fill with disney-like palette. 
+* scale_fill_nature() to fill with nature like palette. 
 
 ### Example Code
-You may run these examples to see the difference in applying these colour scales. In addition use the help functions and navigate to the help section where you will find some examples.
+You may run the examples in the code below to see the difference in applying these colour scales. In addition use the help functions and navigate to the bottom of the help page where you will find some examples.
 
 * ?scale_colour_disney
 * ?scale_fill_disney
 * ?scale_colour_nature
 * ?scale_fill_nature 
 
-```{r, message = FALSE, warning = FALSE, eval = TRUE}
+```{r, message = FALSE, warning = FALSE, eval = FALSE}
 library(werpals)
 library(tidyverse)
 
@@ -91,7 +91,7 @@ ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
     scale_fill_nature(palette = "jozi", guide = "none")
 ```
 
-```{r, message = FALSE, warning = FALSE, eval = TRUE}
+```{r, message = FALSE, warning = FALSE, eval = FALSE}
 # Recreate the plots displayed in the images below
 ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
   geom_bar() +
