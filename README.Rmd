@@ -98,6 +98,6 @@ p2 <- ggdraw() + draw_image("man/figures/ggplot_cinderella.png", scale = 0.9)
 plot_grid(p1, p2)
 ```
 
-<img src="./man/figures/provence.png" width = 300px /> 
+<img src="./man/figures/provence.png" width = 600px /> 
 
-<img src="./man/figures/cinderella.png" width = 300px /> 
+<img src="./man/figures/cinderella.png" width = 600px /> 
