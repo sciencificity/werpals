@@ -212,6 +212,7 @@ nature_cols <- function(...) {
 }
 
 #' Function to create palettes
+#' @export
 disney_palettes <- list(
   `main` = disney_cols(),
 
@@ -259,6 +260,7 @@ disney_palettes <- list(
 )
 
 #' Function to create palettes
+#' @export
 nature_palettes <- list(
   `main` = nature_cols(),
 

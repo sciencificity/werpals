@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 
 ## Palettes inspired by nature and disney films
 
-<img src="./alice.PNG" width = 300px /> 
+<img src="./man/figures/alice.PNG" width = 300px /> 
 
 
 Palette Colours from a blog post [here](http://elijahmeeks.com/#content/blog/2015_08_17_palettes) and [here](https://medium.com/sketch-app-sources/10-color-palettes-from-the-natural-world-to-inspire-your-creative-streak-bc2fb73d161e).
@@ -23,7 +23,7 @@ Palette made following blog post [here](https://drsimonj.svbtle.com/creating-cor
 
 __The development version__
 
-```r
+```{r, eval = FALSE}
 devtools::install_github("sciencificity/werpals")
 ```
 
