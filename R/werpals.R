@@ -732,3 +732,32 @@ scale_fill_nature <- function(palette = "main", discrete = TRUE, reverse = FALSE
 
 # Suggestion on creating RColorBrewer like palette viewers
 
+werpals_display <- function(pal = c("disney", "nature")) {
+  if (pal == "disney") {
+    pal <- disney_palettes[-1]
+    }
+  if (pal == "nature") {
+    pal <- nature_palettes[-1]
+  }
+
+  col.number <<- lengths(pal)
+  nr <<- length(pal)
+  nc <<- max(col.number)
+
+  ylim <- c(0, nr)
+  oldpar <- par(mgp=c(2,0.25,0))
+  on.exit(par(oldpar))
+  plot(1, 1, xlim = c(0,nc), ylim = ylim, type = "n", axes = FALSE, bty = "n",
+       xlab = "", ylab = "")
+
+  for(i in 1:nr){
+    nj <<- col.number[i]
+    shadi <- pal[[names(pal)[i]]]
+    rect(xleft=0:(nj-1), ybottom=i-1, xright=1:nj, ytop=i-0.2, col=shadi, border="light grey")
+  }
+  text(rep(-0.15,nr),(1:nr)-0.6, labels=names(pal), xpd=TRUE, adj=1, cex = 0.8, srt = 45)
+}
+
+# Examples
+# werpals_display(pal = "disney")
+# werpals_display(pal = "nature")
