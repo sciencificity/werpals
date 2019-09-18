@@ -730,3 +730,5 @@ scale_fill_nature <- function(palette = "main", discrete = TRUE, reverse = FALSE
   }
 }
 
+# Suggestion on creating RColorBrewer like palette viewers
+
