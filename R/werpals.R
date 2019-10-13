@@ -7,6 +7,10 @@
 # Nature colours from:
 # https://medium.com/sketch-app-sources/10-color-palettes-from-the-natural-world-to-inspire-your-creative-streak-bc2fb73d161e
 
+# if (base::getRversion() >= "2.15.1") {
+#   utils::globalVariables(c("col.number", "nc", "nj", "nr"))
+# }
+
 #' The list of disney colours
 disney_colours <- c(
   `cind1`       = "#96abb1",
@@ -251,11 +255,14 @@ disney_palettes <- list(
   ),
 
   `firefly` = disney_cols(
-    "firefly1", "firefly2",
+    # "firefly1",
+    "firefly2",
     "firefly3", "firefly4",
     "firefly5", "firefly6",
-    "firefly7", "firefly8",
-    "firefly9", "firefly10"
+    #"firefly7",
+    "firefly8",
+    # "firefly9",
+    "firefly10"
   )
 )
 
@@ -353,10 +360,11 @@ nature_palettes <- list(
   )
 )
 
-#' importFrom("grDevices", "colorRampPalette")
-#' importFrom("stringr", "str_glue")
+
 #' Return function to interpolate a disney colour palette
 #'
+#' @importFrom "grDevices" "colorRampPalette"
+#' @importFrom "stringr" "str_glue"
 #' @param palette Character name of palette in disney_palettes
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
@@ -374,10 +382,11 @@ disney_pal <- function(palette = "main", reverse = FALSE, ...) {
   grDevices::colorRampPalette(pal, ...)
 }
 
-#' importFrom("grDevices", "colorRampPalette")
-#' importFrom("stringr", "str_glue")
+
 #' Return function to interpolate a nature colour palette
 #'
+#' @importFrom "grDevices" "colorRampPalette"
+#' @importFrom "stringr" "str_glue"
 #' @param palette Character name of palette in nature_palettes
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
@@ -730,19 +739,30 @@ scale_fill_nature <- function(palette = "main", discrete = TRUE, reverse = FALSE
   }
 }
 
-# Suggestion on creating RColorBrewer like palette viewers
+#' Creates RColorBrewer like palette viewers for the disney and nature palettes
+#' @param pal Character name of palette to display colours for - disney or nature, here
+#' @return A heatmap of the colours for the disney and nature palettes
+#' @export
+#' @importFrom graphics rect par image text plot
+#' @examples
+#' # View the disney colours
+#' werpals_display(pal = "disney")
+#' # View the nature colours
+#' werpals_display(pal = "nature")
+werpals_display <- function(pal) {
+  if (is.null(pal) | !(pal %in% c("disney", "nature")) )
+    stop("Palette not found. The `pal` argument may be 'disney' or 'nature'")
 
-werpals_display <- function(pal = c("disney", "nature")) {
   if (pal == "disney") {
     pal <- disney_palettes[-1]
-    }
-  if (pal == "nature") {
+  }
+  else if (pal == "nature") {
     pal <- nature_palettes[-1]
   }
 
-  col.number <<- lengths(pal)
-  nr <<- length(pal)
-  nc <<- max(col.number)
+  col.number <- lengths(pal)
+  nr <- length(pal)
+  nc <- max(col.number)
 
   ylim <- c(0, nr)
   oldpar <- par(mgp=c(2,0.25,0))
@@ -751,13 +771,10 @@ werpals_display <- function(pal = c("disney", "nature")) {
        xlab = "", ylab = "")
 
   for(i in 1:nr){
-    nj <<- col.number[i]
+    nj <- col.number[i]
     shadi <- pal[[names(pal)[i]]]
     rect(xleft=0:(nj-1), ybottom=i-1, xright=1:nj, ytop=i-0.2, col=shadi, border="light grey")
   }
-  text(rep(-0.15,nr),(1:nr)-0.6, labels=names(pal), xpd=TRUE, adj=1, cex = 0.8, srt = 45)
+  text(rep(-0.15,nr),(1:nr)-0.6, labels=names(pal), xpd=TRUE, adj=1, cex = 0.7, srt = 45)
 }
 
-# Examples
-# werpals_display(pal = "disney")
-# werpals_display(pal = "nature")

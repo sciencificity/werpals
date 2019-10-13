@@ -2,9 +2,7 @@
 % Please edit documentation in R/werpals.R
 \name{nature_pal}
 \alias{nature_pal}
-\title{importFrom("grDevices", "colorRampPalette")
-importFrom("stringr", "str_glue")
-Return function to interpolate a nature colour palette}
+\title{Return function to interpolate a nature colour palette}
 \usage{
 nature_pal(palette = "main", reverse = FALSE, ...)
 }
@@ -16,7 +14,5 @@ nature_pal(palette = "main", reverse = FALSE, ...)
 \item{...}{Additional arguments to pass to colorRampPalette()}
 }
 \description{
-importFrom("grDevices", "colorRampPalette")
-importFrom("stringr", "str_glue")
 Return function to interpolate a nature colour palette
 }
